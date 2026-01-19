@@ -433,7 +433,7 @@ def GET_LOGIN_DATA(JWT_TOKEN, PAYLOAD, region):
         url = 'https://clientbp.ggblueshark.com/GetLoginData'
     else:
         link = get_region_url(region)
-        url = f"{link}/GetLoginData"
+        url = f"{link}GetLoginData"
 
     headers = {
         'Expect': '100-continue',
