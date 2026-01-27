@@ -26,7 +26,7 @@ hex_key = "326565343438313965396234353938383435313431303637623238313632313837346
 key = bytes.fromhex(hex_key)
 
 REGION_LANG = {"ME": "ar","IND": "hi","ID": "id","VN": "vi","TH": "th","BD": "bn","PK": "ur","TW": "zh","EU": "en","CIS": "ru","NA": "en","SAC": "es","BR": "pt"}
-REGION_URLS = {"IND": "https://client.ind.freefiremobile.com","ID": "https://clientbp.ggblueshark.com/","BR": "https://client.us.freefiremobile.com/","ME": "https://clientbp.common.ggbluefox.com/","VN": "https://clientbp.ggblueshark.com/","TH": "https://clientbp.common.ggbluefox.com/","CIS": "https://clientbp.ggblueshark.com/","BD": "https://clientbp.ggblueshark.com/","PK": "https://clientbp.ggblueshark.com/","SG": "https://clientbp.ggblueshark.com/","NA": "https://client.us.freefiremobile.com/","SAC": "https://client.us.freefiremobile.com/","EU": "https://clientbp.ggblueshark.com/","TW": "https://clientbp.ggblueshark.com/"}
+REGION_URLS = {"IND": "https://client.ind.freefiremobile.com/","ID": "https://clientbp.ggblueshark.com/","BR": "https://client.us.freefiremobile.com/","ME": "https://clientbp.common.ggbluefox.com/","VN": "https://clientbp.ggblueshark.com/","TH": "https://clientbp.common.ggbluefox.com/","CIS": "https://clientbp.ggblueshark.com/","BD": "https://clientbp.ggblueshark.com/","PK": "https://clientbp.ggblueshark.com/","SG": "https://clientbp.ggblueshark.com/","NA": "https://client.us.freefiremobile.com/","SAC": "https://client.us.freefiremobile.com/","EU": "https://clientbp.ggblueshark.com/","TW": "https://clientbp.ggblueshark.com/"}
 
 SESSION = requests.Session()
 SESSION.headers.update({"Connection": "keep-alive"})
@@ -94,7 +94,7 @@ def generate_random_name():
     if CUSTOM_NAME and str(CUSTOM_NAME).strip():
         base = str(CUSTOM_NAME).strip()
         return f"{base}{random_part}"
-    name = 'nR' + random_part
+    name = 'THorY' + random_part
     return name
 
 def generate_custom_password(random_length=9):
@@ -103,7 +103,7 @@ def generate_custom_password(random_length=9):
     if CUSTOM_PASS and str(CUSTOM_PASS).strip():
         base = str(CUSTOM_PASS).strip()
         return f"{base}-{random_part}-NILAY"
-    return f"NRCODEX-{random_part}-NILAY"
+    return f"THORYBHAI-{random_part}-NILAY"
 
 def create_acc(region):
     password = generate_custom_password()
