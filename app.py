@@ -26,7 +26,7 @@ hex_key = "326565343438313965396234353938383435313431303637623238313632313837346
 key = bytes.fromhex(hex_key)
 
 REGION_LANG = {"ME": "ar","IND": "hi","ID": "id","VN": "vi","TH": "th","BD": "bn","PK": "ur","TW": "zh","EU": "en","CIS": "ru","NA": "en","SAC": "es","BR": "pt"}
-REGION_URLS = {"IND": "https://client.ind.freefiremobile.com/","ID": "https://clientbp.ggblueshark.com/","BR": "https://client.us.freefiremobile.com/","ME": "https://clientbp.common.ggbluefox.com/","VN": "https://clientbp.ggblueshark.com/","TH": "https://clientbp.common.ggbluefox.com/","CIS": "https://clientbp.ggblueshark.com/","BD": "https://clientbp.ggblueshark.com/","PK": "https://clientbp.ggblueshark.com/","SG": "https://clientbp.ggblueshark.com/","NA": "https://client.us.freefiremobile.com/","SAC": "https://client.us.freefiremobile.com/","EU": "https://clientbp.ggblueshark.com/","TW": "https://clientbp.ggblueshark.com/"}
+REGION_URLS = {"IND": "http://15.235.218.69:9001/","ID": "https://clientbp.ggblueshark.com/","BR": "https://client.us.freefiremobile.com/","ME": "https://clientbp.common.ggbluefox.com/","VN": "https://clientbp.ggblueshark.com/","TH": "https://clientbp.common.ggbluefox.com/","CIS": "https://clientbp.ggblueshark.com/","BD": "https://clientbp.ggblueshark.com/","PK": "https://clientbp.ggblueshark.com/","SG": "https://clientbp.ggblueshark.com/","NA": "https://client.us.freefiremobile.com/","SAC": "https://client.us.freefiremobile.com/","EU": "https://clientbp.ggblueshark.com/","TW": "https://clientbp.ggblueshark.com/"}
 
 SESSION = requests.Session()
 SESSION.headers.update({"Connection": "keep-alive"})
@@ -188,7 +188,7 @@ def to_unicode_escaped(s):
     )
 
 def Major_Regsiter(access_token , open_id , field , uid , password, region):
-    url = "https://loginbp.ggpolarbear.com/MajorRegister"
+    url = "https://servers.prv.ob52.astutech.online/MajorRegister"
     name = generate_random_name()
 
     headers = {
@@ -235,7 +235,7 @@ def encrypt_api(plain_text):
     return cipher_text.hex()
 
 def chooseregion(data_bytes, jwt_token):
-    url = "https://loginbp.ggpolarbear.com/ChooseRegion"
+    url = "https://servers.prv.ob52.astutech.online/ChooseRegion"
     payload = data_bytes
     headers = {
         'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 12; M2101K7AG Build/SKQ1.210908.001)",
@@ -276,9 +276,9 @@ def login(uid , password, access_token , open_id, response , status_code , name 
     
     Final_Payload = bytes.fromhex(d)
     if region.lower() == "me":
-        URL = "https://loginbp.ggpolarbear.com/MajorLogin"
+        URL = "https://servers.prv.ob52.astutech.online/MajorLogin"
     else:
-        URL = "https://loginbp.ggpolarbear.com/MajorLogin"
+        URL = "https://servers.prv.ob52.astutech.online/MajorLogin"
     RESPONSE = requests.post(URL, headers=headers, data=Final_Payload,verify=False, timeout=30) 
 
     if RESPONSE.status_code == 200:
@@ -334,9 +334,9 @@ def login_server(uid , password, access_token , open_id, response , status_code 
 
     Final_Payload = bytes.fromhex(d)
     if region.lower() == "me":
-        URL = "https://loginbp.ggpolarbear.com/MajorLogin"
+        URL = "https://servers.prv.ob52.astutech.online/MajorLogin"
     else:
-        URL = "https://loginbp.ggpolarbear.com/MajorLogin"
+        URL = "https://servers.prv.ob52.astutech.online/MajorLogin"
     RESPONSE = requests.post(URL, headers=headers, data=Final_Payload,verify=False, timeout=30) 
     if RESPONSE.status_code == 200:
         if len(RESPONSE.text) < 10:
